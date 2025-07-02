@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="max-w-2xl mx-auto bg-white p-6 rounded shadow mt-10">
+  <h2 class="text-2xl font-bold mb-4">Update Profile</h2>
+
+  <form method="POST" enctype="multipart/form-data" class="space-y-4">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {{ avatar_form.as_p }}
+    <button class="bg-blue-500 text-white px-4 py-2 rounded">Update Info</button>
+  </form>
+
+  <hr class="my-6">
+
+  <h3 class="text-lg font-semibold mb-2">Change Password</h3>
+  <form method="POST" class="space-y-4">
+    {% csrf_token %}
+    {{ password_form.as_p }}
+    <button class="bg-green-500 text-white px-4 py-2 rounded">Change Password</button>
+  </form>
+</div>
+{% endblock %}
