@@ -1,6 +1,8 @@
 asgiref==3.8.1
-Django==5.2.3
 django-allauth==65.9.0
 sqlparse==0.5.3
 tzdata==2025.2
 sorl-thumbnail==12.11.0
+Django==4.2.24
+Pillow==11.3.0
+# Add any other packages your project needs
